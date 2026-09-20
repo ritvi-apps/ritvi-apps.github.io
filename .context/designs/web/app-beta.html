@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Imposter: Find the Liar — Ritvi Apps</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="../shared.css" />
+</head>
+<body class="bg-bg text-fg">
+
+<div class="border-b border-dashed border-line-2 bg-bg-2 px-5 py-2">
+  <div class="mx-auto flex max-w-page flex-wrap items-center gap-1.5 font-mono text-xs2">
+    <span class="mr-1 text-label uppercase tracking-label text-fg-3">Web ·&nbsp;/apps/imposter ›</span>
+    <a href="home.html"     class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Home</a>
+    <a href="app.html"      class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">App · live</a>
+    <a href="app-beta.html" class="rounded border border-brand/50 bg-brand-wash px-2 py-0.5 font-medium text-brand">App · beta</a>
+    <a href="app-soon.html" class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">App · coming</a>
+    <a href="get.html"      class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Get redirect</a>
+    <a href="press.html"    class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Press kit</a>
+    <a href="../index.html" class="ml-auto rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">← All screens</a>
+  </div>
+</div>
+
+<div class="mx-auto max-w-page px-gutter pt-6">
+  <div class="rounded-card border border-dashed border-line-2 bg-bg-2 px-5 py-4">
+    <p class="font-mono text-label uppercase tracking-label text-fg-3">Variant · one platform open, one not</p>
+    <p class="mt-2 text-small text-fg-2">
+      Same page as <a href="app.html" class="text-brand hover:underline">/apps/charades</a>. What changes is the Get block:
+      Android goes to the open beta, and <b>iOS renders disabled with the reason beside it</b> rather than
+      being hidden. On the live site this whole app was a dead <code class="font-mono text-xs2">&lt;div&gt;</code> labelled
+      "Coming soon" — while its Android beta link already worked.
+    </p>
+  </div>
+</div>
+
+<header class="sticky top-0 z-40 mt-6 border-y border-line bg-bg/95 backdrop-blur">
+  <div class="mx-auto flex max-w-page items-center gap-5 px-gutter py-3.5">
+    <a href="home.html" class="flex items-center gap-2.5">
+      <span class="icon-plate shot-ph h-9 w-9 text-[9px] text-fg-3">R</span>
+      <span class="text-h3 font-bold tracking-tight">Ritvi Apps</span></a>
+    <nav class="ml-auto hidden items-center gap-6 text-small font-medium text-fg-2 md:flex">
+      <a href="home.html#apps" class="hover:text-fg">Apps</a>
+      <a href="press.html" class="hover:text-fg">Press</a>
+      <a href="support.html" class="hover:text-fg">Support</a>
+    </nav>
+    <a href="#get" class="inline-flex items-center gap-2 rounded-pill bg-brand px-4 py-2 text-small font-semibold text-brand-ink transition hover:bg-brand-2">
+      Join the beta <i data-lucide="arrow-down" class="h-4 w-4"></i></a>
+  </div>
+</header>
+
+<section class="bloom border-b border-line">
+  <div class="mx-auto max-w-page px-gutter pb-14 pt-section">
+    <a href="home.html#apps" class="inline-flex items-center gap-1.5 text-small text-fg-2 hover:text-fg">
+      <i data-lucide="arrow-left" class="h-4 w-4"></i> All apps</a>
+
+    <div class="mt-7 flex flex-wrap items-start gap-7">
+      <span class="icon-plate shot-ph h-[128px] w-[128px] shrink-0 text-[10px] text-fg-3">Icon 512</span>
+      <div class="min-w-0 flex-1">
+        <span class="rounded-pill bg-beta-wash px-2.5 py-1 font-mono text-label uppercase tracking-label text-beta">Android beta open to anyone</span>
+        <h1 class="mt-4 max-w-[16ch] text-d1 font-extrabold">Imposter: Find the Liar</h1>
+        <p class="mt-4 max-w-measure text-lead text-fg-2">
+          Everyone gets the word. Except one of you. Social deduction for 3–20 people on one phone.
+        </p>
+      </div>
+    </div>
+
+    <!-- GET BLOCK · beta variant -->
+    <div id="get" class="mt-10 scroll-mt-24 rounded-card border border-line bg-surface p-6 shadow-lift">
+      <p class="font-mono text-label uppercase tracking-label text-fg-3">Get the app</p>
+      <div class="mt-4 grid gap-3 sm:grid-cols-3">
+
+        <a href="#" class="flex items-center gap-3 rounded-pill bg-brand px-5 py-3 font-semibold text-brand-ink transition hover:bg-brand-2">
+          <i data-lucide="globe" class="h-5 w-5 shrink-0"></i>
+          <span class="min-w-0"><span class="block font-mono text-label uppercase tracking-label opacity-75">App website</span>
+            <span class="block truncate text-small">imposter.ritvi.app</span></span></a>
+
+        <div class="btn-off flex items-center gap-3 rounded-pill border border-line-2 bg-surface-2 px-5 py-3 font-semibold text-fg-2">
+          <i data-lucide="apple" class="h-5 w-5 shrink-0"></i>
+          <span class="min-w-0"><span class="block font-mono text-label uppercase tracking-label text-fg-3">iOS</span>
+            <span class="block truncate text-small">No build uploaded yet</span></span></div>
+
+        <a href="#" class="flex items-center gap-3 rounded-pill bg-play px-5 py-3 font-semibold text-on-play transition hover:opacity-90">
+          <i data-lucide="play" class="h-5 w-5 shrink-0"></i>
+          <span class="min-w-0"><span class="block font-mono text-label uppercase tracking-label opacity-75">Android</span>
+            <span class="block truncate text-small">Join the open beta</span></span></a>
+
+      </div>
+      <p class="mt-4 flex items-start gap-2 text-small text-fg-2">
+        <i data-lucide="info" class="mt-0.5 h-4 w-4 shrink-0 text-beta"></i>
+        A beta build updates more often and can break. Leaving the beta at any time puts you back on
+        the public version. <a href="#" class="text-brand hover:underline">What joining a beta means</a>
+      </p>
+      <p class="mt-3 font-mono text-xs2 text-fg-3">
+        One short link sends a phone to whichever of these is available:
+        <a href="get.html" class="text-brand hover:underline">ritvi-apps.github.io/go/imposter</a>
+      </p>
+    </div>
+
+    <dl class="mt-6 grid gap-px overflow-hidden rounded-card border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+      <div class="bg-surface px-5 py-4"><dt class="font-mono text-label uppercase tracking-label text-fg-3">Players</dt><dd class="mt-1.5 text-h3 font-bold">3 – 20</dd></div>
+      <div class="bg-surface px-5 py-4"><dt class="font-mono text-label uppercase tracking-label text-fg-3">Free packs</dt><dd class="mt-1.5 text-h3 font-bold">3 of 10</dd></div>
+      <div class="bg-surface px-5 py-4"><dt class="font-mono text-label uppercase tracking-label text-fg-3">Ads</dt><dd class="mt-1.5 text-h3 font-bold">None</dd></div>
+      <div class="bg-surface px-5 py-4"><dt class="font-mono text-label uppercase tracking-label text-fg-3">Analytics</dt><dd class="mt-1.5 text-h3 font-bold">None</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="border-b border-line bg-bg-2">
+  <div class="mx-auto max-w-page px-gutter py-section">
+    <h2 class="text-d2 font-extrabold">What it looks like</h2>
+    <div class="rail mt-8 flex gap-6 overflow-x-auto pb-4">
+      <div class="device w-[230px] shrink-0"><div class="device-screen shot-ph aspect-[9/19.5]"><p class="px-4 font-mono text-xs2 uppercase tracking-label text-fg-3">Screenshot 1<br><span class="normal-case tracking-normal">The word reveal</span></p></div></div>
+      <div class="device w-[230px] shrink-0"><div class="device-screen shot-ph aspect-[9/19.5]"><p class="px-4 font-mono text-xs2 uppercase tracking-label text-fg-3">Screenshot 2<br><span class="normal-case tracking-normal">The Imposter's hint</span></p></div></div>
+      <div class="device w-[230px] shrink-0"><div class="device-screen shot-ph aspect-[9/19.5]"><p class="px-4 font-mono text-xs2 uppercase tracking-label text-fg-3">Screenshot 3<br><span class="normal-case tracking-normal">Pack picker</span></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="mx-auto max-w-page px-gutter py-section">
+  <h2 class="max-w-[20ch] text-d2 font-extrabold">Most players see a word. One of you does not.</h2>
+  <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="rounded-card border border-line bg-surface p-6">
+      <i data-lucide="venetian-mask" class="h-5 w-5 text-brand"></i>
+      <h3 class="mt-4 text-h3 font-bold">A hint, hand-written</h3>
+      <p class="mt-2 text-small text-fg-2">The Imposter sees one word of help, written by a person for that exact word — not generated.</p>
+    </div>
+    <div class="rounded-card border border-line bg-surface p-6">
+      <i data-lucide="ghost" class="h-5 w-5 text-brand"></i>
+      <h3 class="mt-4 text-h3 font-bold">Mr. White sees nothing</h3>
+      <p class="mt-2 text-small text-fg-2">And can still steal the round by naming the word at the end.</p>
+    </div>
+    <div class="rounded-card border border-line bg-surface p-6">
+      <i data-lucide="eye-off" class="h-5 w-5 text-brand"></i>
+      <h3 class="mt-4 text-h3 font-bold">No analytics, at all</h3>
+      <p class="mt-2 text-small text-fg-2">There is no analytics SDK in the project. Nothing about your rounds leaves the phone.</p>
+    </div>
+  </div>
+</section>
+
+<section class="border-t border-line bg-bg-2">
+  <div class="mx-auto max-w-page px-gutter py-section">
+    <div class="rounded-card border border-line bg-surface p-7">
+      <p class="font-mono text-label uppercase tracking-label text-fg-3">Not on your platform yet?</p>
+      <h2 class="mt-3 max-w-[22ch] text-h2 font-extrabold">Leave an email and we will send one message when iOS opens.</h2>
+      <p class="mt-3 max-w-measure text-small text-fg-2">
+        One message, for that app, when there is something to install. No newsletter, no drip sequence.
+      </p>
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <a href="support.html" class="inline-flex items-center gap-2 rounded-pill bg-brand px-5 py-3 text-small font-semibold text-brand-ink transition hover:bg-brand-2">
+          <i data-lucide="mail" class="h-4 w-4"></i> Email us to be told</a>
+        <span class="font-mono text-xs2 text-fg-3">GitHub Pages cannot store a form submission — this is a mailto, on purpose.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-line">
+  <div class="mx-auto flex max-w-page flex-wrap items-center gap-x-6 gap-y-3 px-gutter py-8 font-mono text-xs2 text-fg-3">
+    <span>© 2026 Ritvi Apps</span>
+    <a href="#" class="hover:text-fg">Privacy</a>
+    <a href="#" class="hover:text-fg">Terms</a>
+    <a href="support.html" class="hover:text-fg">Support</a>
+    <span class="ml-auto">Made in Pune, India</span>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

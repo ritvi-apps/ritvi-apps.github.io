@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Opening Charades… — Ritvi Apps</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="../shared.css" />
+</head>
+<body class="bg-bg text-fg">
+
+<div class="border-b border-dashed border-line-2 bg-bg-2 px-5 py-2">
+  <div class="mx-auto flex max-w-page flex-wrap items-center gap-1.5 font-mono text-xs2">
+    <span class="mr-1 text-label uppercase tracking-label text-fg-3">Web ·&nbsp;/go/[slug] ›</span>
+    <a href="home.html"     class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Home</a>
+    <a href="app.html"      class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">App · live</a>
+    <a href="app-beta.html" class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">App · beta</a>
+    <a href="get.html"      class="rounded border border-brand/50 bg-brand-wash px-2 py-0.5 font-medium text-brand">Get redirect</a>
+    <a href="press.html"    class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Press kit</a>
+    <a href="../index.html" class="ml-auto rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">← All screens</a>
+  </div>
+</div>
+
+<div class="mx-auto max-w-page px-gutter pt-8">
+  <div class="rounded-card border border-dashed border-line-2 bg-bg-2 px-5 py-4">
+    <p class="font-mono text-label uppercase tracking-label text-fg-3">The redirect · /go/&lt;slug&gt;</p>
+    <p class="mt-2 max-w-prose text-small text-fg-2">
+      One short link per app that a phone resolves to the right destination — the app's own site,
+      the App Store, or Google Play. This is what goes in a bio, a QR code, a WhatsApp forward or a
+      poster, so the link never has to be reprinted when a platform opens.
+    </p>
+    <p class="mt-2 max-w-prose text-small text-fg-2">
+      It is a page, not a bare <code class="font-mono text-xs2">meta refresh</code>, for three reasons:
+      a wrong guess must be recoverable, a disabled platform must say <i>why</i>, and a desktop
+      visitor needs something other than a store they cannot install from.
+      <b>The other two destinations always stay visible while it redirects.</b>
+    </p>
+  </div>
+</div>
+
+<!-- ══ the interstitial ═════════════════════════════════════════════════════ -->
+<main class="mx-auto flex min-h-[70vh] max-w-lg flex-col justify-center px-gutter py-section">
+  <div class="rounded-card border border-line bg-surface p-8 text-center shadow-frame">
+
+    <span class="icon-plate shot-ph mx-auto h-[88px] w-[88px] text-[9px] text-fg-3">Icon</span>
+    <h1 class="mt-6 text-h2 font-extrabold">Opening Charades — Act it Out!</h1>
+    <p class="mt-2 text-small text-fg-2">Android detected — sending you to Google Play.</p>
+
+    <!-- progress. A real 2s bar, not a spinner: a spinner says "wait", a bar
+         says how long, and this wait has a known end. -->
+    <div class="mt-6 h-1 overflow-hidden rounded-pill bg-bg-2">
+      <div class="h-full w-2/3 rounded-pill bg-brand"></div>
+    </div>
+
+    <a href="#" class="mt-7 flex items-center justify-center gap-2.5 rounded-pill bg-play px-5 py-3 font-semibold text-on-play transition hover:opacity-90">
+      <i data-lucide="play" class="h-5 w-5"></i> Continue to Google Play</a>
+
+    <p class="mt-7 font-mono text-label uppercase tracking-label text-fg-3">Or go somewhere else</p>
+    <div class="mt-4 grid gap-2.5">
+      <a href="app.html" class="flex items-center gap-3 rounded-pill border border-line-2 bg-surface px-5 py-2.5 text-small font-semibold transition hover:border-brand">
+        <i data-lucide="globe" class="h-4 w-4 shrink-0 text-brand"></i> The app's own page</a>
+      <a href="#" class="flex items-center gap-3 rounded-pill border border-line-2 bg-surface px-5 py-2.5 text-small font-semibold transition hover:border-brand">
+        <i data-lucide="apple" class="h-4 w-4 shrink-0"></i> iOS TestFlight instead</a>
+    </div>
+
+    <p class="mt-6 text-xs2 text-fg-3">
+      Not redirecting? <a href="#" class="text-brand hover:underline">Tap here</a>. This page sets no
+      cookies and records nothing.
+    </p>
+  </div>
+
+  <a href="home.html" class="mx-auto mt-8 inline-flex items-center gap-1.5 text-small text-fg-2 hover:text-fg">
+    <i data-lucide="arrow-left" class="h-4 w-4"></i> All Ritvi apps</a>
+</main>
+
+<!-- ══ the other two states of this same page ═══════════════════════════════ -->
+<section class="border-t border-line bg-bg-2">
+  <div class="mx-auto max-w-page px-gutter py-section">
+    <h2 class="text-h2 font-extrabold">The other two states</h2>
+    <p class="mt-2 max-w-prose text-small text-fg-2">Same route, same layout, different opening line. Neither dead-ends.</p>
+
+    <div class="mt-8 grid gap-6 lg:grid-cols-2">
+
+      <div class="rounded-card border border-line bg-surface p-7">
+        <p class="font-mono text-label uppercase tracking-label text-fg-3">Desktop — nothing to install here</p>
+        <div class="mt-5 rounded-card border border-line bg-bg p-6 text-center">
+          <span class="icon-plate shot-ph mx-auto h-16 w-16 text-[8px] text-fg-3">Icon</span>
+          <h3 class="mt-4 text-h3 font-bold">Charades is a phone app</h3>
+          <p class="mt-1.5 text-small text-fg-2">Scan this on the phone you want it on, or open the app's page.</p>
+          <div class="shot-ph mx-auto mt-5 h-32 w-32 rounded-xl"><p class="font-mono text-[9px] uppercase tracking-label text-fg-3">QR</p></div>
+          <div class="mt-5 grid gap-2.5">
+            <a href="app.html" class="rounded-pill bg-brand px-5 py-2.5 text-small font-semibold text-brand-ink">Open the app's page</a>
+            <a href="#" class="rounded-pill border border-line-2 px-5 py-2.5 text-small font-semibold">Email myself the link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-card border border-line bg-surface p-7">
+        <p class="font-mono text-label uppercase tracking-label text-fg-3">Platform not open yet</p>
+        <div class="mt-5 rounded-card border border-line bg-bg p-6 text-center">
+          <span class="icon-plate shot-ph mx-auto h-16 w-16 text-[8px] text-fg-3">Icon</span>
+          <h3 class="mt-4 text-h3 font-bold">Imposter is not on iOS yet</h3>
+          <p class="mt-1.5 text-small text-fg-2">No build has been uploaded. Here is everything that does work today.</p>
+          <div class="mt-5 grid gap-2.5">
+            <a href="#" class="rounded-pill bg-play px-5 py-2.5 text-small font-semibold text-on-play">Android beta — open to anyone</a>
+            <a href="app-beta.html" class="rounded-pill border border-line-2 px-5 py-2.5 text-small font-semibold">Read about the app</a>
+            <a href="support.html" class="rounded-pill border border-line-2 px-5 py-2.5 text-small font-semibold">Tell me when iOS opens</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-line">
+  <div class="mx-auto flex max-w-page flex-wrap items-center gap-x-6 gap-y-3 px-gutter py-8 font-mono text-xs2 text-fg-3">
+    <span>© 2026 Ritvi Apps</span>
+    <a href="#" class="hover:text-fg">Privacy</a>
+    <a href="support.html" class="hover:text-fg">Support</a>
+    <span class="ml-auto">Made in Pune, India</span>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

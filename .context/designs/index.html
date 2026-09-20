@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ritvi Apps site redesign — all screens</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="shared.css" />
+</head>
+<body class="bg-bg text-fg">
+
+<header class="border-b border-line bg-bg-2">
+  <div class="mx-auto max-w-page px-gutter py-9">
+    <p class="font-mono text-label uppercase tracking-label text-fg-3">ritvi-apps.github.io · redesign v1 · designs only</p>
+    <h1 class="mt-3 max-w-[22ch] text-d1 font-extrabold">A store front, not a text document.</h1>
+    <p class="mt-5 max-w-prose text-lead text-fg-2">
+      12 files · 8 web screens · 4 mobile screens · violet carried over from the live site · light and dark.
+      Nothing is wired yet — this is the gate before any HTML ships.
+    </p>
+  </div>
+</header>
+
+<main class="mx-auto max-w-page space-y-10 px-gutter py-10">
+
+  <section class="rationale">
+    <p class="rationale-title">What was wrong</p>
+    <p>This domain is the <b>developer website on every Play and App Store listing</b>. That is its job. The live version is a single 5KB page with four cards and <b>no icons and no screenshots anywhere</b>.</p>
+    <p><b>Three of the four cards are dead <code>&lt;div&gt;</code>s labelled "Coming soon"</b> — while Imposter has an open Android beta and Aakalan has an open TestFlight, both already recorded in the portfolio's <code>profile.json</code>. Charades' iOS TestFlight is not shown either. <b>Working install links existed and were not used.</b></p>
+    <p>There is <b>no page per app</b>, so every store listing, privacy link and support route points at the same generic page and the click is wasted. And "How we build" sits <b>above</b> the apps — the values before the thing anyone arrived for.</p>
+  </section>
+
+  <section class="rationale">
+    <p class="rationale-title">The three rules this set is built on</p>
+    <p><b>1 · Every app has a page, and every page has a Get block.</b> The same three destinations in the same order every time — the app's own site, App Store, Google Play. A destination that does not exist renders <b>disabled with the reason beside it</b>, never hidden: "no build uploaded yet" is information, a missing button is a dead end.</p>
+    <p><b>2 · Availability is never a euphemism.</b> Live · Beta open · Closed testing · Coming. If an app has a join link, the card says Beta open and links to it. "Coming" is reserved for an app nobody can install — which, today, is AskCal alone.</p>
+    <p><b>3 · Show the app.</b> Icon and screenshots on every card and every page, reusing the same assets as the store listings so the two can never disagree.</p>
+  </section>
+
+  <!-- ══ web ══ -->
+  <section>
+    <div class="flex flex-wrap items-baseline justify-between gap-3">
+      <h2 class="text-h2 font-extrabold">Web · desktop</h2>
+      <p class="font-mono text-xs2 text-fg-3">max-w 1152 · fluid to 390</p>
+    </div>
+    <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+      <a href="web/home.html" class="group rounded-card border border-line bg-surface p-5 shadow-lift transition hover:-translate-y-0.5 hover:border-brand/40">
+        <div class="flex items-center gap-2"><i data-lucide="house" class="h-4 w-4 text-brand"></i><span class="font-mono text-xs2 text-fg-3">/</span></div>
+        <h3 class="mt-3 text-h3 font-bold group-hover:text-brand">Landing</h3>
+        <p class="mt-1.5 text-small text-fg-2">Hero → all 5 apps with icons, screenshot rails and Get buttons → how we build → support, legal, press.</p>
+      </a>
+
+      <a href="web/app.html" class="group rounded-card border border-line bg-surface p-5 shadow-lift transition hover:-translate-y-0.5 hover:border-brand/40">
+        <div class="flex items-center gap-2"><i data-lucide="smartphone" class="h-4 w-4 text-brand"></i><span class="font-mono text-xs2 text-fg-3">/apps/charades</span></div>
+        <h3 class="mt-3 text-h3 font-bold group-hover:text-brand">App page · live</h3>
+        <p class="mt-1.5 text-small text-fg-2">The full template. Get block, quick facts, screenshots, features, pricing stated plainly, permissions with reasons, changelog.</p>
+      </a>
+
+      <a href="web/app-beta.html" class="group rounded-card border border-line bg-surface p-5 shadow-lift transition hover:-translate-y-0.5 hover:border-brand/40">
+        <div class="flex items-center gap-2"><i data-lucide="flask-conical" class="h-4 w-4 text-brand"></i><span class="font-mono text-xs2 text-fg-3">/apps/imposter</span></div>
+        <h3 class="mt-3 text-h3 font-bold group-hover:text-brand">App page · beta variant</h3>
+        <p class="mt-1.5 text-small text-fg-2">One platform open, one not. Shows the disabled-with-reason state and what joining a beta means.</p>
+      </a>
+
+      <a href="web/app-soon.html" class="group rounded-card border border-line bg-surface p-5 shadow-lift transition hover:-translate-y-0.5 hover:border-brand/40">
+        <div class="flex items-center gap-2"><i data-lucide="hourglass" class="h-4 w-4 text-brand"></i><span class="font-mono text-xs2 text-fg-3">/apps/askcal</span></div>
+        <h3 class="mt-3 text-h3 font-bold group-hover:text-brand">App page · coming variant</h3>
+        <p class="mt-1.5 text-small text-fg-2">The only honest "Coming" — nothing installable on either platform. Still a real page with a real pitch.</p>
+      </a>
+
+      <a href="web/get.html" class="group rounded-card border border-line bg-surface p-5 shadow-lift transition hover:-translate-y-0.5 hover:border-brand/40">
+        <div class="flex items-center gap-2"><i data-lucide="split" class="h-4 w-4 text-brand"></i><span class="font-mono text-xs2 text-fg-3">/go/[slug]</span></div>
+        <h3 class="mt-3 text-h3 font-bold group-hover:text-brand">Get redirect</h3>
+        <p class="mt-1.5 text-small text-fg-2">One short link per app that resolves to the right destination. Three states: redirecting, desktop with a QR, and platform-not-open.</p>
+      </a>
+
+      <a href="web/press.html" class="group rounded-card border border-line bg-surface p-5 shadow-lift transition hover:-translate-y-0.5 hover:border-brand/40">
+        <div class="flex items-center gap-2"><i data-lucide="newspaper" class="h-4 w-4 text-brand"></i><span class="font-mono text-xs2 text-fg-3">/press</span></div>
+        <h3 class="mt-3 text-h3 font-bold group-hover:text-brand">Press kit</h3>
+        <p class="mt-1.5 text-small text-fg-2">Boilerplate at three lengths, facts we will not exaggerate, per-app asset bundles, and usage rules.</p>
+      </a>
+
+      <a href="web/support.html" class="group rounded-card border border-line bg-surface p-5 shadow-lift transition hover:-translate-y-0.5 hover:border-brand/40">
+        <div class="flex items-center gap-2"><i data-lucide="life-buoy" class="h-4 w-4 text-brand"></i><span class="font-mono text-xs2 text-fg-3">/support</span></div>
+        <h3 class="mt-3 text-h3 font-bold group-hover:text-brand">Support</h3>
+        <p class="mt-1.5 text-small text-fg-2">Three paths, because a store support link lands here for exactly three reasons — including the account deletion both stores require.</p>
+      </a>
+
+      <a href="web/404.html" class="group rounded-card border border-line bg-surface p-5 shadow-lift transition hover:-translate-y-0.5 hover:border-brand/40">
+        <div class="flex items-center gap-2"><i data-lucide="circle-slash" class="h-4 w-4 text-brand"></i><span class="font-mono text-xs2 text-fg-3">/404</span></div>
+        <h3 class="mt-3 text-h3 font-bold group-hover:text-brand">Not found</h3>
+        <p class="mt-1.5 text-small text-fg-2">Almost always an old store link, so it routes straight to the app list rather than apologising.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ══ mobile ══ -->
+  <section>
+    <div class="flex flex-wrap items-baseline justify-between gap-3">
+      <h2 class="text-h2 font-extrabold">Mobile · 390</h2>
+      <p class="font-mono text-xs2 text-fg-3">most traffic here is a phone tapping a store's website link</p>
+    </div>
+    <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <a href="mobile/home.html" class="group rounded-card border border-line bg-surface p-5 shadow-lift transition hover:-translate-y-0.5 hover:border-brand/40">
+        <span class="font-mono text-xs2 text-fg-3">/ · full scroll</span>
+        <h3 class="mt-2.5 text-h3 font-bold group-hover:text-brand">Landing</h3>
+        <p class="mt-1.5 text-small text-fg-2">Apps start within one screen of the top. Every card keeps its icon and its Get button.</p>
+      </a>
+      <a href="mobile/app.html" class="group rounded-card border border-line bg-surface p-5 shadow-lift transition hover:-translate-y-0.5 hover:border-brand/40">
+        <span class="font-mono text-xs2 text-fg-3">/apps/[slug] · full scroll</span>
+        <h3 class="mt-2.5 text-h3 font-bold group-hover:text-brand">App page</h3>
+        <p class="mt-1.5 text-small text-fg-2">Get block stacks to three full-width rows, plus a sticky install bar for the decision made further down.</p>
+      </a>
+      <a href="mobile/get.html" class="group rounded-card border border-line bg-surface p-5 shadow-lift transition hover:-translate-y-0.5 hover:border-brand/40">
+        <span class="font-mono text-xs2 text-fg-3">state · 390 × 844 ×2</span>
+        <h3 class="mt-2.5 text-h3 font-bold group-hover:text-brand">Get redirect</h3>
+        <p class="mt-1.5 text-small text-fg-2">Where a QR code or a forwarded link lands. Redirecting, and nothing-to-install.</p>
+      </a>
+      <a href="mobile/nav-open.html" class="group rounded-card border border-line bg-surface p-5 shadow-lift transition hover:-translate-y-0.5 hover:border-brand/40">
+        <span class="font-mono text-xs2 text-fg-3">state · 390 × 844</span>
+        <h3 class="mt-2.5 text-h3 font-bold group-hover:text-brand">Menu open</h3>
+        <p class="mt-1.5 text-small text-fg-2">The menu is the app list with live availability, not a list of section headings.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══ tokens ══ -->
+  <section>
+    <h2 class="text-h2 font-extrabold">Tokens</h2>
+    <p class="mt-2 max-w-prose text-small text-fg-2">
+      Defined once in <code class="font-mono text-xs2">shared.css</code> and remapped under
+      <code class="font-mono text-xs2">prefers-color-scheme: dark</code>; exposed as utilities in
+      <code class="font-mono text-xs2">tailwind.config.js</code>. Every screen is 100% Tailwind.
+      Switch your OS theme with this page open — every screen in the set follows.
+    </p>
+
+    <div class="mt-6 grid gap-4 sm:grid-cols-2">
+      <div class="rounded-card border border-line bg-surface p-5">
+        <p class="font-mono text-label uppercase tracking-label text-fg-3">Ground, ink, brand</p>
+        <div class="mt-4 grid grid-cols-4 gap-2">
+          <div><div class="h-12 rounded border border-line bg-bg"></div><p class="mt-1.5 font-mono text-[10px] text-fg-3">bg</p></div>
+          <div><div class="h-12 rounded border border-line bg-bg-2"></div><p class="mt-1.5 font-mono text-[10px] text-fg-3">bg-2</p></div>
+          <div><div class="h-12 rounded border border-line bg-surface"></div><p class="mt-1.5 font-mono text-[10px] text-fg-3">surface</p></div>
+          <div><div class="h-12 rounded bg-brand"></div><p class="mt-1.5 font-mono text-[10px] text-fg-3">brand</p></div>
+          <div><div class="h-12 rounded bg-fg"></div><p class="mt-1.5 font-mono text-[10px] text-fg-3">fg</p></div>
+          <div><div class="h-12 rounded bg-fg-2"></div><p class="mt-1.5 font-mono text-[10px] text-fg-3">fg-2</p></div>
+          <div><div class="h-12 rounded bg-fg-3"></div><p class="mt-1.5 font-mono text-[10px] text-fg-3">fg-3</p></div>
+          <div><div class="h-12 rounded bg-play"></div><p class="mt-1.5 font-mono text-[10px] text-fg-3">play</p></div>
+        </div>
+        <p class="mt-4 text-small text-fg-2">fg-3 is 4.6:1 on bg and brand is 6.9:1, so both clear AA — the violet is safe as text, not only as a fill.</p>
+      </div>
+
+      <div class="rounded-card border border-line bg-surface p-5">
+        <p class="font-mono text-label uppercase tracking-label text-fg-3">Availability</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-pill bg-live-wash px-2.5 py-1 font-mono text-label uppercase tracking-label text-live">Live</span>
+          <span class="rounded-pill bg-beta-wash px-2.5 py-1 font-mono text-label uppercase tracking-label text-beta">Beta open</span>
+          <span class="rounded-pill bg-soon-wash px-2.5 py-1 font-mono text-label uppercase tracking-label text-soon">Coming</span>
+        </div>
+        <p class="mt-4 text-small text-fg-2">Three states on the surface, four in the copy — closed testing reads as Beta with the platform named.</p>
+
+        <p class="mt-6 font-mono text-label uppercase tracking-label text-fg-3">Get block · all three states</p>
+        <div class="mt-3 grid gap-2">
+          <span class="flex items-center gap-2.5 rounded-pill bg-play px-4 py-2 text-small font-semibold text-on-play"><i data-lucide="play" class="h-4 w-4"></i> Google Play</span>
+          <span class="flex items-center gap-2.5 rounded-pill bg-apple px-4 py-2 text-small font-semibold text-on-apple"><i data-lucide="apple" class="h-4 w-4"></i> Join the TestFlight</span>
+          <span class="btn-off flex items-center gap-2.5 rounded-pill border border-line-2 bg-surface-2 px-4 py-2 text-small font-semibold text-fg-2"><i data-lucide="apple" class="h-4 w-4"></i> No build uploaded yet</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rationale">
+    <p class="rationale-title">Open questions for you</p>
+    <p><b>The app websites.</b> The Get block's first destination assumes a per-app domain (<code>charades.ritvi.app</code> and so on). If those do not exist, that button should point back at the app's page here instead — say which and the designs change in one place.</p>
+    <p><b>The support address.</b> The screens keep <code>firodiya.ritesh@gmail.com</code>, since a prior commit deliberately reverted to the personal address on the listings. A <code>support@</code> alias is a one-line change if you now want one.</p>
+    <p><b>Tic Tac Toe's bundle id</b> is <code>com.riteshf.tictactoe</code>, not <code>com.ritvi.*</code> — it is listed here as a Ritvi app anyway. Tell me if it should not be.</p>
+  </section>
+
+  <section class="rationale">
+    <p class="rationale-title">What is deliberately not here</p>
+    <p><b>Real assets.</b> Every icon and screenshot is a labelled placeholder — roughly 40 slots. Most already exist in the app repos' <code>.context/store/</code> folders and can be copied in rather than made.</p>
+    <p><b>Any shipped HTML.</b> The live <code>index.html</code> is untouched. That starts after these are approved.</p>
+  </section>
+
+</main>
+
+<footer class="border-t border-line bg-bg-2">
+  <div class="mx-auto max-w-page px-gutter py-7 font-mono text-xs2 text-fg-3">
+    Designs only · nothing wired · approve before any site code is written
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

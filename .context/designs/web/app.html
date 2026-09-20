@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charades — Act it Out! — Ritvi Apps</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="../shared.css" />
+</head>
+<body class="bg-bg text-fg">
+
+<div class="border-b border-dashed border-line-2 bg-bg-2 px-5 py-2">
+  <div class="mx-auto flex max-w-page flex-wrap items-center gap-1.5 font-mono text-xs2">
+    <span class="mr-1 text-label uppercase tracking-label text-fg-3">Web ·&nbsp;/apps/charades ›</span>
+    <a href="home.html"     class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Home</a>
+    <a href="app.html"      class="rounded border border-brand/50 bg-brand-wash px-2 py-0.5 font-medium text-brand">App · live</a>
+    <a href="app-beta.html" class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">App · beta</a>
+    <a href="app-soon.html" class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">App · coming</a>
+    <a href="get.html"      class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Get redirect</a>
+    <a href="press.html"    class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Press kit</a>
+    <a href="support.html"  class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Support</a>
+    <a href="../index.html" class="ml-auto rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">← All screens</a>
+  </div>
+</div>
+
+<header class="sticky top-0 z-40 border-b border-line bg-bg/95 backdrop-blur">
+  <div class="mx-auto flex max-w-page items-center gap-5 px-gutter py-3.5">
+    <a href="home.html" class="flex items-center gap-2.5">
+      <span class="icon-plate shot-ph h-9 w-9 text-[9px] text-fg-3">R</span>
+      <span class="text-h3 font-bold tracking-tight">Ritvi Apps</span>
+    </a>
+    <nav class="ml-auto hidden items-center gap-6 text-small font-medium text-fg-2 md:flex">
+      <a href="home.html#apps" class="hover:text-fg">Apps</a>
+      <a href="press.html" class="hover:text-fg">Press</a>
+      <a href="support.html" class="hover:text-fg">Support</a>
+    </nav>
+    <a href="#get" class="inline-flex items-center gap-2 rounded-pill bg-brand px-4 py-2 text-small font-semibold text-brand-ink transition hover:bg-brand-2">
+      Get the app <i data-lucide="arrow-down" class="h-4 w-4"></i></a>
+  </div>
+</header>
+
+<!-- ══ app hero ═════════════════════════════════════════════════════════════ -->
+<section class="bloom border-b border-line">
+  <div class="mx-auto max-w-page px-gutter pb-14 pt-section">
+    <a href="home.html#apps" class="inline-flex items-center gap-1.5 text-small text-fg-2 hover:text-fg">
+      <i data-lucide="arrow-left" class="h-4 w-4"></i> All apps</a>
+
+    <div class="mt-7 flex flex-wrap items-start gap-7">
+      <span class="icon-plate shot-ph h-[128px] w-[128px] shrink-0 text-[10px] text-fg-3">Icon 512</span>
+      <div class="min-w-0 flex-1">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="rounded-pill bg-live-wash px-2.5 py-1 font-mono text-label uppercase tracking-label text-live">Live on Google Play</span>
+          <span class="rounded-pill bg-beta-wash px-2.5 py-1 font-mono text-label uppercase tracking-label text-beta">iOS public TestFlight</span>
+        </div>
+        <h1 class="mt-4 max-w-[16ch] text-d1 font-extrabold">Charades — Act it Out!</h1>
+        <p class="mt-4 max-w-measure text-lead text-fg-2">
+          Dumb charades for the room you are already in. 5,149 cards, fully offline, no daily limits.
+        </p>
+      </div>
+    </div>
+
+    <!-- ══ THE GET BLOCK — RULE 1 ════════════════════════════════════════════
+         Three destinations, always the same three, always in this order:
+         the app's own site, App Store, Google Play. A destination that does
+         not exist yet renders disabled with the reason beside it — never
+         hidden, because "not on iOS yet" is information and a missing button
+         is a dead end. -->
+    <div id="get" class="mt-10 scroll-mt-24 rounded-card border border-line bg-surface p-6 shadow-lift">
+      <p class="font-mono text-label uppercase tracking-label text-fg-3">Get the app</p>
+      <div class="mt-4 grid gap-3 sm:grid-cols-3">
+
+        <a href="#" class="flex items-center gap-3 rounded-pill bg-brand px-5 py-3 font-semibold text-brand-ink transition hover:bg-brand-2">
+          <i data-lucide="globe" class="h-5 w-5 shrink-0"></i>
+          <span class="min-w-0"><span class="block font-mono text-label uppercase tracking-label opacity-75">App website</span>
+            <span class="block truncate text-small">charades.ritvi.app</span></span></a>
+
+        <a href="#" class="flex items-center gap-3 rounded-pill bg-apple px-5 py-3 font-semibold text-on-apple transition hover:opacity-90">
+          <i data-lucide="apple" class="h-5 w-5 shrink-0"></i>
+          <span class="min-w-0"><span class="block font-mono text-label uppercase tracking-label opacity-75">iOS</span>
+            <span class="block truncate text-small">Join the TestFlight</span></span></a>
+
+        <a href="#" class="flex items-center gap-3 rounded-pill bg-play px-5 py-3 font-semibold text-on-play transition hover:opacity-90">
+          <i data-lucide="play" class="h-5 w-5 shrink-0"></i>
+          <span class="min-w-0"><span class="block font-mono text-label uppercase tracking-label opacity-75">Android</span>
+            <span class="block truncate text-small">Google Play</span></span></a>
+
+      </div>
+      <p class="mt-4 font-mono text-xs2 text-fg-3">
+        One short link sends a phone to the right one of these:
+        <a href="get.html" class="text-brand hover:underline">ritvi-apps.github.io/go/charades</a>
+      </p>
+    </div>
+
+    <!-- quick facts -->
+    <dl class="mt-6 grid gap-px overflow-hidden rounded-card border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
+      <div class="bg-surface px-5 py-4"><dt class="font-mono text-label uppercase tracking-label text-fg-3">Version</dt><dd class="mt-1.5 text-h3 font-bold">1.0.30</dd></div>
+      <div class="bg-surface px-5 py-4"><dt class="font-mono text-label uppercase tracking-label text-fg-3">Cards</dt><dd class="mt-1.5 text-h3 font-bold">5,149</dd></div>
+      <div class="bg-surface px-5 py-4"><dt class="font-mono text-label uppercase tracking-label text-fg-3">Price</dt><dd class="mt-1.5 text-h3 font-bold">Free + one purchase</dd></div>
+      <div class="bg-surface px-5 py-4"><dt class="font-mono text-label uppercase tracking-label text-fg-3">Ads</dt><dd class="mt-1.5 text-h3 font-bold">None</dd></div>
+      <div class="bg-surface px-5 py-4"><dt class="font-mono text-label uppercase tracking-label text-fg-3">Network</dt><dd class="mt-1.5 text-h3 font-bold">Not required</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ══ screenshots — RULE 3 ═════════════════════════════════════════════════ -->
+<section class="border-b border-line bg-bg-2">
+  <div class="mx-auto max-w-page px-gutter py-section">
+    <h2 class="text-d2 font-extrabold">What it looks like</h2>
+    <div class="rail mt-8 flex gap-6 overflow-x-auto pb-4">
+      <div class="device w-[230px] shrink-0"><div class="device-screen shot-ph aspect-[9/19.5]"><p class="px-4 font-mono text-xs2 uppercase tracking-label text-fg-3">Screenshot 1<br><span class="normal-case tracking-normal">Card in play</span></p></div></div>
+      <div class="device w-[230px] shrink-0"><div class="device-screen shot-ph aspect-[9/19.5]"><p class="px-4 font-mono text-xs2 uppercase tracking-label text-fg-3">Screenshot 2<br><span class="normal-case tracking-normal">Pack picker</span></p></div></div>
+      <div class="device w-[230px] shrink-0"><div class="device-screen shot-ph aspect-[9/19.5]"><p class="px-4 font-mono text-xs2 uppercase tracking-label text-fg-3">Screenshot 3<br><span class="normal-case tracking-normal">Team setup</span></p></div></div>
+      <div class="device w-[230px] shrink-0"><div class="device-screen shot-ph aspect-[9/19.5]"><p class="px-4 font-mono text-xs2 uppercase tracking-label text-fg-3">Screenshot 4<br><span class="normal-case tracking-normal">Round result</span></p></div></div>
+    </div>
+    <p class="mt-3 font-mono text-xs2 text-fg-3">Same assets as the store listing — one set, reused, so the site and the listing can never disagree.</p>
+  </div>
+</section>
+
+<!-- ══ features ═════════════════════════════════════════════════════════════ -->
+<section class="mx-auto max-w-page px-gutter py-section">
+  <h2 class="max-w-[18ch] text-d2 font-extrabold">Built for a noisy room, not a spec sheet.</h2>
+  <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="rounded-card border border-line bg-surface p-6">
+      <i data-lucide="layers" class="h-5 w-5 text-brand"></i>
+      <h3 class="mt-4 text-h3 font-bold">Four packs, 5,149 cards</h3>
+      <p class="mt-2 text-small text-fg-2">Bollywood, Tollywood, Hollywood, and Family &amp; Kids. Enough that a group does not see a repeat in a night.</p>
+    </div>
+    <div class="rounded-card border border-line bg-surface p-6">
+      <i data-lucide="wifi-off" class="h-5 w-5 text-brand"></i>
+      <h3 class="mt-4 text-h3 font-bold">Entirely offline</h3>
+      <p class="mt-2 text-small text-fg-2">Every card ships in the app. Aeroplane mode, a basement, a road trip — it does not care.</p>
+    </div>
+    <div class="rounded-card border border-line bg-surface p-6">
+      <i data-lucide="infinity" class="h-5 w-5 text-brand"></i>
+      <h3 class="mt-4 text-h3 font-bold">No daily limits</h3>
+      <p class="mt-2 text-small text-fg-2">Play as long as the room holds up. Nothing throttles you into waiting or paying.</p>
+    </div>
+    <div class="rounded-card border border-line bg-surface p-6">
+      <i data-lucide="ban" class="h-5 w-5 text-brand"></i>
+      <h3 class="mt-4 text-h3 font-bold">No ad SDK at all</h3>
+      <p class="mt-2 text-small text-fg-2">Not disabled, not "ad-free tier" — there is no ad library in the project.</p>
+    </div>
+    <div class="rounded-card border border-line bg-surface p-6">
+      <i data-lucide="users" class="h-5 w-5 text-brand"></i>
+      <h3 class="mt-4 text-h3 font-bold">One phone, any group size</h3>
+      <p class="mt-2 text-small text-fg-2">Pass and play. No accounts, no lobby, no second device to pair.</p>
+    </div>
+    <div class="rounded-card border border-line bg-surface p-6">
+      <i data-lucide="timer" class="h-5 w-5 text-brand"></i>
+      <h3 class="mt-4 text-h3 font-bold">Tilt to score</h3>
+      <p class="mt-2 text-small text-fg-2">Phone on the forehead, tilt down for got it, up for pass. The way everyone already plays it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ pricing, stated plainly ══════════════════════════════════════════════ -->
+<section class="border-y border-line bg-bg-2">
+  <div class="mx-auto grid max-w-page gap-10 px-gutter py-section lg:grid-cols-2 lg:gap-16">
+    <div>
+      <p class="font-mono text-label uppercase tracking-label text-fg-3">What it costs</p>
+      <h2 class="mt-3 max-w-[16ch] text-d2 font-extrabold">Free to play, one payment to unlock the rest.</h2>
+      <p class="mt-5 max-w-measure text-body text-fg-2">
+        No subscription, no consumable coins, and no ad you have to watch to keep going. You will
+        know the price before you tap, and it is charged once.
+      </p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2">
+      <div class="rounded-card border border-line bg-surface p-6">
+        <p class="font-mono text-label uppercase tracking-label text-fg-3">Free</p>
+        <p class="mt-2 text-d2 font-extrabold">₹0</p>
+        <ul class="mt-4 space-y-2 text-small text-fg-2">
+          <li class="flex gap-2"><i data-lucide="check" class="mt-1 h-3.5 w-3.5 shrink-0 text-live"></i>A full pack, no time limit</li>
+          <li class="flex gap-2"><i data-lucide="check" class="mt-1 h-3.5 w-3.5 shrink-0 text-live"></i>Offline, forever</li>
+          <li class="flex gap-2"><i data-lucide="check" class="mt-1 h-3.5 w-3.5 shrink-0 text-live"></i>No ads</li>
+        </ul>
+      </div>
+      <div class="rounded-card border border-brand/40 bg-surface p-6">
+        <p class="font-mono text-label uppercase tracking-label text-brand">One payment</p>
+        <p class="mt-2 text-d2 font-extrabold">Everything</p>
+        <ul class="mt-4 space-y-2 text-small text-fg-2">
+          <li class="flex gap-2"><i data-lucide="check" class="mt-1 h-3.5 w-3.5 shrink-0 text-live"></i>All four packs, all 5,149 cards</li>
+          <li class="flex gap-2"><i data-lucide="check" class="mt-1 h-3.5 w-3.5 shrink-0 text-live"></i>Paid once, kept forever</li>
+          <li class="flex gap-2"><i data-lucide="check" class="mt-1 h-3.5 w-3.5 shrink-0 text-live"></i>Restores on a new phone</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ permissions + privacy ════════════════════════════════════════════════ -->
+<section class="mx-auto max-w-page px-gutter py-section">
+  <div class="grid gap-10 lg:grid-cols-2 lg:gap-16">
+    <div>
+      <p class="font-mono text-label uppercase tracking-label text-fg-3">Permissions</p>
+      <h2 class="mt-3 text-d2 font-extrabold">What it asks for, and why.</h2>
+      <dl class="mt-8 divide-y divide-line border-y border-line">
+        <div class="grid gap-1 py-4 sm:grid-cols-[10rem_1fr] sm:gap-5">
+          <dt class="font-semibold">Vibration</dt>
+          <dd class="text-small text-fg-2">The buzz when a round ends. Nothing else uses it.</dd>
+        </div>
+        <div class="grid gap-1 py-4 sm:grid-cols-[10rem_1fr] sm:gap-5">
+          <dt class="font-semibold">Motion sensor</dt>
+          <dd class="text-small text-fg-2">Tilt to score. Readings never leave the device.</dd>
+        </div>
+        <div class="grid gap-1 py-4 sm:grid-cols-[10rem_1fr] sm:gap-5">
+          <dt class="font-semibold">Billing</dt>
+          <dd class="text-small text-fg-2">Only if you buy the unlock. Handled by the store, never by us.</dd>
+        </div>
+        <div class="grid gap-1 py-4 sm:grid-cols-[10rem_1fr] sm:gap-5">
+          <dt class="font-semibold text-fg-3">Not requested</dt>
+          <dd class="text-small text-fg-2">No camera, microphone, contacts, location, or network access for gameplay.</dd>
+        </div>
+      </dl>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#" class="inline-flex items-center gap-2 rounded-pill border border-line-2 bg-surface px-4 py-2 text-small font-semibold transition hover:border-brand">
+          <i data-lucide="scale" class="h-4 w-4"></i> Privacy policy</a>
+        <a href="support.html" class="inline-flex items-center gap-2 rounded-pill border border-line-2 bg-surface px-4 py-2 text-small font-semibold transition hover:border-brand">
+          <i data-lucide="life-buoy" class="h-4 w-4"></i> Support</a>
+      </div>
+    </div>
+
+    <div>
+      <p class="font-mono text-label uppercase tracking-label text-fg-3">What is new</p>
+      <h2 class="mt-3 text-d2 font-extrabold">1.0.30</h2>
+      <ol class="mt-8 divide-y divide-line border-y border-line">
+        <li class="grid gap-1 py-4 sm:grid-cols-[6rem_1fr] sm:gap-5">
+          <span class="font-mono text-xs2 uppercase tracking-label text-fg-3">1.0.30</span>
+          <span class="text-small text-fg-2">Family &amp; Kids pack expanded; faster card shuffle on older phones.</span>
+        </li>
+        <li class="grid gap-1 py-4 sm:grid-cols-[6rem_1fr] sm:gap-5">
+          <span class="font-mono text-xs2 uppercase tracking-label text-fg-3">1.0.28</span>
+          <span class="text-small text-fg-2">Tollywood pack added. Tilt sensitivity is now adjustable.</span>
+        </li>
+        <li class="grid gap-1 py-4 sm:grid-cols-[6rem_1fr] sm:gap-5">
+          <span class="font-mono text-xs2 uppercase tracking-label text-fg-3">1.0.25</span>
+          <span class="text-small text-fg-2">Public iOS TestFlight opened.</span>
+        </li>
+      </ol>
+      <p class="mt-4 font-mono text-xs2 text-fg-3">Three most recent entries. The store listing carries the rest.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ other apps ═══════════════════════════════════════════════════════════ -->
+<section class="border-t border-line bg-bg-2">
+  <div class="mx-auto max-w-page px-gutter py-section">
+    <h2 class="text-h2 font-extrabold">More from Ritvi Apps</h2>
+    <div class="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <a href="app.html" class="group flex items-center gap-3.5 rounded-card border border-line bg-surface p-4 transition hover:border-brand/40">
+        <span class="icon-plate shot-ph h-12 w-12 shrink-0 text-[8px] text-fg-3">Icon</span>
+        <span class="min-w-0"><span class="block truncate font-semibold group-hover:text-brand">Tic Tac Toe</span>
+          <span class="block font-mono text-label uppercase tracking-label text-live">Live</span></span></a>
+      <a href="app-beta.html" class="group flex items-center gap-3.5 rounded-card border border-line bg-surface p-4 transition hover:border-brand/40">
+        <span class="icon-plate shot-ph h-12 w-12 shrink-0 text-[8px] text-fg-3">Icon</span>
+        <span class="min-w-0"><span class="block truncate font-semibold group-hover:text-brand">Imposter</span>
+          <span class="block font-mono text-label uppercase tracking-label text-beta">Beta open</span></span></a>
+      <a href="app-beta.html" class="group flex items-center gap-3.5 rounded-card border border-line bg-surface p-4 transition hover:border-brand/40">
+        <span class="icon-plate shot-ph h-12 w-12 shrink-0 text-[8px] text-fg-3">Icon</span>
+        <span class="min-w-0"><span class="block truncate font-semibold group-hover:text-brand">Aakalan</span>
+          <span class="block font-mono text-label uppercase tracking-label text-beta">Beta open</span></span></a>
+      <a href="app-soon.html" class="group flex items-center gap-3.5 rounded-card border border-line bg-surface p-4 transition hover:border-brand/40">
+        <span class="icon-plate shot-ph h-12 w-12 shrink-0 text-[8px] text-fg-3">Icon</span>
+        <span class="min-w-0"><span class="block truncate font-semibold group-hover:text-brand">AskCal</span>
+          <span class="block font-mono text-label uppercase tracking-label text-soon">Coming</span></span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-line">
+  <div class="mx-auto flex max-w-page flex-wrap items-center gap-x-6 gap-y-3 px-gutter py-8 font-mono text-xs2 text-fg-3">
+    <span>© 2026 Ritvi Apps</span>
+    <a href="#" class="hover:text-fg">Privacy</a>
+    <a href="#" class="hover:text-fg">Terms</a>
+    <a href="support.html" class="hover:text-fg">Support</a>
+    <a href="press.html" class="hover:text-fg">Press</a>
+    <span class="ml-auto">Made in Pune, India</span>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

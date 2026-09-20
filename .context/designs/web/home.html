@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ritvi Apps — small, honest apps built in India</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="../shared.css" />
+</head>
+<body class="bg-bg text-fg">
+
+<!-- ══ design-set chrome · not part of the product ══════════════════════════ -->
+<div class="border-b border-dashed border-line-2 bg-bg-2 px-5 py-2">
+  <div class="mx-auto flex max-w-page flex-wrap items-center gap-1.5 font-mono text-xs2">
+    <span class="mr-1 text-label uppercase tracking-label text-fg-3">Web ·&nbsp;/ ›</span>
+    <a href="home.html"      class="rounded border border-brand/50 bg-brand-wash px-2 py-0.5 font-medium text-brand">Home</a>
+    <a href="app.html"       class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">App · live</a>
+    <a href="app-beta.html"  class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">App · beta</a>
+    <a href="app-soon.html"  class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">App · coming</a>
+    <a href="get.html"       class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Get redirect</a>
+    <a href="press.html"     class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Press kit</a>
+    <a href="support.html"   class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Support</a>
+    <a href="404.html"       class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">404</a>
+    <a href="../index.html"  class="ml-auto rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">← All screens</a>
+  </div>
+</div>
+
+<!-- ══ header ═══════════════════════════════════════════════════════════════ -->
+<header class="sticky top-0 z-40 border-b border-line bg-bg/95 backdrop-blur">
+  <div class="mx-auto flex max-w-page items-center gap-5 px-gutter py-3.5">
+    <a href="home.html" class="flex items-center gap-2.5">
+      <span class="icon-plate shot-ph h-9 w-9 text-[9px] text-fg-3">R</span>
+      <span class="text-h3 font-bold tracking-tight">Ritvi Apps</span>
+    </a>
+    <nav class="ml-auto hidden items-center gap-6 text-small font-medium text-fg-2 md:flex">
+      <a href="#apps" class="hover:text-fg">Apps</a>
+      <a href="#how" class="hover:text-fg">How we build</a>
+      <a href="press.html" class="hover:text-fg">Press</a>
+      <a href="support.html" class="hover:text-fg">Support</a>
+    </nav>
+    <a href="#apps" class="inline-flex items-center gap-2 rounded-pill bg-brand px-4 py-2 text-small font-semibold text-brand-ink transition hover:bg-brand-2">
+      Get an app <i data-lucide="arrow-down" class="h-4 w-4"></i></a>
+  </div>
+</header>
+
+<!-- ══ hero ═════════════════════════════════════════════════════════════════ -->
+<section class="bloom">
+  <div class="mx-auto grid max-w-page items-center gap-10 px-gutter pb-14 pt-section lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-16">
+    <div>
+      <p class="inline-flex items-center gap-2 rounded-pill border border-line-2 bg-surface px-3 py-1 font-mono text-label uppercase tracking-label text-fg-2">
+        <span class="h-1.5 w-1.5 rounded-pill bg-live"></span> 2 on Google Play · 2 betas open now
+      </p>
+      <h1 class="mt-6 max-w-[15ch] text-d1 font-extrabold">Small, honest apps built in India.</h1>
+      <p class="mt-6 max-w-measure text-lead text-fg-2">
+        Party games for the room you are already in, and a few useful things for the rest of the week.
+        No ads in our games. One-time purchases where we can. Offline wherever an app has no reason
+        to need a network.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href="#apps" class="inline-flex items-center gap-2 rounded-pill bg-brand px-5 py-3 text-body font-semibold text-brand-ink transition hover:bg-brand-2">
+          Browse the apps <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+        <a href="#how" class="inline-flex items-center gap-2 rounded-pill border border-line-2 bg-surface px-5 py-3 text-body font-semibold transition hover:border-brand">
+          How we build</a>
+      </div>
+    </div>
+
+    <div class="justify-self-center">
+      <div class="shot-ph icon-plate aspect-square w-[15rem]">
+        <p class="px-6 font-mono text-xs2 uppercase tracking-label text-fg-3">Character slot<br>
+          <span class="normal-case tracking-normal">The Ritvi Apps character, already in icon-512.png · 512×512</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ apps — RULE 2 and RULE 3 ═════════════════════════════════════════════
+     Apps come before the values band. The live site put "How we build" first,
+     which is the thing nobody arrived for. Every card carries an icon, a real
+     availability state, and a Get button that goes somewhere. -->
+<section id="apps" class="scroll-mt-20 border-t border-line bg-bg-2">
+  <div class="mx-auto max-w-page px-gutter py-section">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="font-mono text-label uppercase tracking-label text-fg-3">Apps · 5</p>
+        <h2 class="mt-3 max-w-[18ch] text-d2 font-extrabold">Everything we have out, and what state it is in.</h2>
+      </div>
+      <div class="flex flex-wrap gap-2 font-mono text-xs2 uppercase tracking-label">
+        <span class="rounded-pill bg-live-wash px-2.5 py-1 text-live">Live · 2</span>
+        <span class="rounded-pill bg-beta-wash px-2.5 py-1 text-beta">Beta open · 2</span>
+        <span class="rounded-pill bg-soon-wash px-2.5 py-1 text-soon">Coming · 1</span>
+      </div>
+    </div>
+
+    <div class="mt-10 grid gap-5 md:grid-cols-2">
+
+      <!-- Charades · live both platforms -->
+      <article class="flex flex-col overflow-hidden rounded-card border border-line bg-surface shadow-lift">
+        <div class="flex gap-4 p-6">
+          <span class="icon-plate shot-ph h-[72px] w-[72px] shrink-0 text-[9px] text-fg-3">Icon</span>
+          <div class="min-w-0">
+            <span class="rounded-pill bg-live-wash px-2 py-0.5 font-mono text-label uppercase tracking-label text-live">Live</span>
+            <h3 class="mt-2 text-h2 font-bold">Charades — Act it Out!</h3>
+            <p class="mt-1 text-small text-fg-2">Dumb charades for the room you are already in. 5,149 cards across Bollywood, Tollywood, Hollywood and Family &amp; Kids.</p>
+          </div>
+        </div>
+        <div class="rail flex gap-3 overflow-x-auto px-6 pb-5">
+          <div class="shot-ph aspect-[9/16] w-28 shrink-0 rounded-xl"><p class="font-mono text-[9px] uppercase tracking-label text-fg-3">Shot 1</p></div>
+          <div class="shot-ph aspect-[9/16] w-28 shrink-0 rounded-xl"><p class="font-mono text-[9px] uppercase tracking-label text-fg-3">Shot 2</p></div>
+          <div class="shot-ph aspect-[9/16] w-28 shrink-0 rounded-xl"><p class="font-mono text-[9px] uppercase tracking-label text-fg-3">Shot 3</p></div>
+        </div>
+        <div class="mt-auto flex flex-wrap items-center gap-2.5 border-t border-line p-5">
+          <a href="get.html" class="inline-flex items-center gap-2 rounded-pill bg-brand px-4 py-2 text-small font-semibold text-brand-ink transition hover:bg-brand-2">
+            Get the app <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+          <span class="font-mono text-xs2 text-fg-3">Play · TestFlight</span>
+          <a href="app.html" class="ml-auto text-small font-semibold text-brand hover:underline">Details</a>
+        </div>
+      </article>
+
+      <!-- Tic Tac Toe · live both -->
+      <article class="flex flex-col overflow-hidden rounded-card border border-line bg-surface shadow-lift">
+        <div class="flex gap-4 p-6">
+          <span class="icon-plate shot-ph h-[72px] w-[72px] shrink-0 text-[9px] text-fg-3">Icon</span>
+          <div class="min-w-0">
+            <span class="rounded-pill bg-live-wash px-2 py-0.5 font-mono text-label uppercase tracking-label text-live">Live</span>
+            <h3 class="mt-2 text-h2 font-bold">Tic Tac Toe — 2 Player XO</h3>
+            <p class="mt-1 text-small text-fg-2">The classic 3×3, done properly. Two players on one device, or a minimax AI that plays perfectly on Hard.</p>
+          </div>
+        </div>
+        <div class="rail flex gap-3 overflow-x-auto px-6 pb-5">
+          <div class="shot-ph aspect-[9/16] w-28 shrink-0 rounded-xl"><p class="font-mono text-[9px] uppercase tracking-label text-fg-3">Shot 1</p></div>
+          <div class="shot-ph aspect-[9/16] w-28 shrink-0 rounded-xl"><p class="font-mono text-[9px] uppercase tracking-label text-fg-3">Shot 2</p></div>
+        </div>
+        <div class="mt-auto flex flex-wrap items-center gap-2.5 border-t border-line p-5">
+          <a href="get.html" class="inline-flex items-center gap-2 rounded-pill bg-brand px-4 py-2 text-small font-semibold text-brand-ink transition hover:bg-brand-2">
+            Get the app <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+          <span class="font-mono text-xs2 text-fg-3">Play · TestFlight</span>
+          <a href="app.html" class="ml-auto text-small font-semibold text-brand hover:underline">Details</a>
+        </div>
+      </article>
+
+      <!-- Imposter · Android beta open -->
+      <article class="flex flex-col overflow-hidden rounded-card border border-line bg-surface shadow-lift">
+        <div class="flex gap-4 p-6">
+          <span class="icon-plate shot-ph h-[72px] w-[72px] shrink-0 text-[9px] text-fg-3">Icon</span>
+          <div class="min-w-0">
+            <span class="rounded-pill bg-beta-wash px-2 py-0.5 font-mono text-label uppercase tracking-label text-beta">Android beta open</span>
+            <h3 class="mt-2 text-h2 font-bold">Imposter: Find the Liar</h3>
+            <p class="mt-1 text-small text-fg-2">Everyone gets the word. Except one of you. Social deduction for 3–20 people on one phone, with no ads and no analytics at all.</p>
+          </div>
+        </div>
+        <div class="rail flex gap-3 overflow-x-auto px-6 pb-5">
+          <div class="shot-ph aspect-[9/16] w-28 shrink-0 rounded-xl"><p class="font-mono text-[9px] uppercase tracking-label text-fg-3">Shot 1</p></div>
+          <div class="shot-ph aspect-[9/16] w-28 shrink-0 rounded-xl"><p class="font-mono text-[9px] uppercase tracking-label text-fg-3">Shot 2</p></div>
+        </div>
+        <div class="mt-auto flex flex-wrap items-center gap-2.5 border-t border-line p-5">
+          <a href="get.html" class="inline-flex items-center gap-2 rounded-pill bg-brand px-4 py-2 text-small font-semibold text-brand-ink transition hover:bg-brand-2">
+            Join the beta <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+          <span class="font-mono text-xs2 text-fg-3">Android only, for now</span>
+          <a href="app-beta.html" class="ml-auto text-small font-semibold text-brand hover:underline">Details</a>
+        </div>
+      </article>
+
+      <!-- Aakalan · iOS beta open -->
+      <article class="flex flex-col overflow-hidden rounded-card border border-line bg-surface shadow-lift">
+        <div class="flex gap-4 p-6">
+          <span class="icon-plate shot-ph h-[72px] w-[72px] shrink-0 text-[9px] text-fg-3">Icon</span>
+          <div class="min-w-0">
+            <span class="rounded-pill bg-beta-wash px-2 py-0.5 font-mono text-label uppercase tracking-label text-beta">iOS beta open</span>
+            <h3 class="mt-2 text-h2 font-bold">Aakalan</h3>
+            <p class="mt-1 text-small text-fg-2">Your expenses and everyone else's, on one ledger. Split with friends and flatmates, and settle up over UPI without leaving the app.</p>
+          </div>
+        </div>
+        <div class="rail flex gap-3 overflow-x-auto px-6 pb-5">
+          <div class="shot-ph aspect-[9/16] w-28 shrink-0 rounded-xl"><p class="font-mono text-[9px] uppercase tracking-label text-fg-3">Shot 1</p></div>
+          <div class="shot-ph aspect-[9/16] w-28 shrink-0 rounded-xl"><p class="font-mono text-[9px] uppercase tracking-label text-fg-3">Shot 2</p></div>
+        </div>
+        <div class="mt-auto flex flex-wrap items-center gap-2.5 border-t border-line p-5">
+          <a href="get.html" class="inline-flex items-center gap-2 rounded-pill bg-brand px-4 py-2 text-small font-semibold text-brand-ink transition hover:bg-brand-2">
+            Join the beta <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+          <span class="font-mono text-xs2 text-fg-3">iOS open · Android in closed testing</span>
+          <a href="app-beta.html" class="ml-auto text-small font-semibold text-brand hover:underline">Details</a>
+        </div>
+      </article>
+
+      <!-- AskCal · genuinely coming -->
+      <article class="flex flex-col overflow-hidden rounded-card border border-dashed border-line-2 bg-surface-2 md:col-span-2">
+        <div class="flex flex-wrap items-center gap-5 p-6">
+          <span class="icon-plate shot-ph h-[72px] w-[72px] shrink-0 text-[9px] text-fg-3">Icon</span>
+          <div class="min-w-0 flex-1">
+            <span class="rounded-pill bg-soon-wash px-2 py-0.5 font-mono text-label uppercase tracking-label text-soon">In review · no build to install yet</span>
+            <h3 class="mt-2 text-h2 font-bold">AskCal</h3>
+            <p class="mt-1 max-w-prose text-small text-fg-2">
+              A calorie counter that admits what it cannot see. Every value is marked Seen, Guessed
+              or Unknown, resolved against USDA data — it asks one or two questions instead of
+              inventing a confident number.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2.5">
+            <a href="app-soon.html" class="inline-flex items-center gap-2 rounded-pill border border-line-2 bg-surface px-4 py-2 text-small font-semibold transition hover:border-brand">
+              <i data-lucide="bell" class="h-4 w-4"></i> Tell me when it lands</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ how we build — now below the apps ════════════════════════════════════ -->
+<section id="how" class="scroll-mt-20">
+  <div class="mx-auto max-w-page px-gutter py-section">
+    <p class="font-mono text-label uppercase tracking-label text-fg-3">How we build</p>
+    <h2 class="mt-3 max-w-[20ch] text-d2 font-extrabold">Four promises, and they are checkable.</h2>
+
+    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="rounded-card border border-line bg-surface p-6">
+        <i data-lucide="ban" class="h-5 w-5 text-brand"></i>
+        <h3 class="mt-4 text-h3 font-bold">No ads in our games</h3>
+        <p class="mt-2 text-small text-fg-2">There is no ad SDK in the project. Not disabled — not there.</p>
+      </div>
+      <div class="rounded-card border border-line bg-surface p-6">
+        <i data-lucide="badge-indian-rupee" class="h-5 w-5 text-brand"></i>
+        <h3 class="mt-4 text-h3 font-bold">Pay once where we can</h3>
+        <p class="mt-2 text-small text-fg-2">One-time purchases, not a subscription you forget about.</p>
+      </div>
+      <div class="rounded-card border border-line bg-surface p-6">
+        <i data-lucide="wifi-off" class="h-5 w-5 text-brand"></i>
+        <h3 class="mt-4 text-h3 font-bold">Works offline</h3>
+        <p class="mt-2 text-small text-fg-2">Wherever the app has no honest reason to need a network.</p>
+      </div>
+      <div class="rounded-card border border-line bg-surface p-6">
+        <i data-lucide="shield-check" class="h-5 w-5 text-brand"></i>
+        <h3 class="mt-4 text-h3 font-bold">Only the permissions we use</h3>
+        <p class="mt-2 text-small text-fg-2">And each app's page says which, and what for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ support + legal ══════════════════════════════════════════════════════ -->
+<section class="border-t border-line bg-bg-2">
+  <div class="mx-auto grid max-w-page gap-8 px-gutter py-section md:grid-cols-3">
+    <a href="support.html" class="group rounded-card border border-line bg-surface p-6 transition hover:border-brand/40">
+      <i data-lucide="life-buoy" class="h-5 w-5 text-brand"></i>
+      <h3 class="mt-4 text-h3 font-bold group-hover:text-brand">Support</h3>
+      <p class="mt-2 text-small text-fg-2">A bug, a question, or a request to delete your account and data.</p>
+    </a>
+    <a href="#" class="group rounded-card border border-line bg-surface p-6 transition hover:border-brand/40">
+      <i data-lucide="scale" class="h-5 w-5 text-brand"></i>
+      <h3 class="mt-4 text-h3 font-bold group-hover:text-brand">Privacy &amp; terms</h3>
+      <p class="mt-2 text-small text-fg-2">A policy per app, at ritvi-apps.github.io/legal.</p>
+    </a>
+    <a href="press.html" class="group rounded-card border border-line bg-surface p-6 transition hover:border-brand/40">
+      <i data-lucide="newspaper" class="h-5 w-5 text-brand"></i>
+      <h3 class="mt-4 text-h3 font-bold group-hover:text-brand">Press kit</h3>
+      <p class="mt-2 text-small text-fg-2">Icons, screenshots, boilerplate and facts, ready to use.</p>
+    </a>
+  </div>
+</section>
+
+<footer class="border-t border-line">
+  <div class="mx-auto flex max-w-page flex-wrap items-center gap-x-6 gap-y-3 px-gutter py-8 font-mono text-xs2 text-fg-3">
+    <span>© 2026 Ritvi Apps</span>
+    <a href="#" class="hover:text-fg">Privacy</a>
+    <a href="#" class="hover:text-fg">Terms</a>
+    <a href="support.html" class="hover:text-fg">Support</a>
+    <a href="press.html" class="hover:text-fg">Press</a>
+    <span class="ml-auto">Made in Pune, India</span>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

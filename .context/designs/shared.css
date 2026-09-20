@@ -1,0 +1,195 @@
+/* Ritvi Apps site — tokens, and only what Tailwind cannot express
+   ==============================================================
+   ritvi-apps.github.io is the developer website on every Play and App Store
+   listing. That is its actual job, and the live version does it badly: it is a
+   text document with four cards, three of which are dead <div>s labelled
+   "Coming soon" — while Imposter has an open Android beta and Aakalan has an
+   open TestFlight. Working links existed and were not used.
+
+   THE SPLIT, and it is load-bearing:
+     tailwind.config.js  every token as a utility scale, all of them var(--…)
+     shared.css          the token definitions, light and dark, plus frames and
+                         gradients that have no utility form
+     *.html              100% Tailwind. No style=, no <style>.
+
+   RULE 1 — every app has a page, and every page has a Get button.
+   A store listing that points at a shared landing page wastes the click. Each
+   app gets /apps/<slug>, and every route into an app goes through one Get
+   block with the same three destinations: the app's own site, App Store,
+   Google Play. Unavailable destinations render disabled with the reason, never
+   hidden — "not on iOS yet" is information; a missing button is a dead end.
+
+   RULE 2 — availability is never a euphemism.
+   Live · Beta open · Closed testing · Coming. Four states, four colours. If an
+   app has a join link for its beta, the card shows Beta open and links to it.
+   "Coming soon" is reserved for an app with no build anyone can install.
+
+   RULE 3 — show the app.
+   Icon and screenshots on every card and every page. This is a store front,
+   and the live page has neither.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg:         #F6F3FE;
+  --bg-2:       #EEE9FB;
+  --surface:    #FFFFFF;
+  --surface-2:  #FAF8FE;
+
+  --fg:         #221C33;
+  --fg-2:       #56506B;
+  --fg-3:       #7A7490;   /* 4.6:1 on --bg — the quiet floor, and it clears AA */
+  --fg-inv:     #FFFFFF;
+
+  --line:       #E5DEF8;
+  --line-2:     #D3C9F0;
+
+  --brand:      #6547E0;   /* 6.9:1 on --bg, so it is safe for text and not only fills */
+  --brand-2:    #8168EA;
+  --brand-wash: #EDE7FD;
+  --brand-ink:  #FFFFFF;
+
+  --play:       #1B7A45;
+  --apple:      #16141C;
+  /* Ink that sits ON the store fills. A separate token from --fg-inv because
+     both fills INVERT between schemes: Play green lightens and Apple graphite
+     becomes near-white in dark, so white label text would drop to ~2:1 on one
+     and vanish entirely on the other. Tie the label to the fill, not to the
+     page. */
+  --on-play:    #FFFFFF;
+  --on-apple:   #FFFFFF;
+
+  --live:       #1B7A45;
+  --live-wash:  #E2F1E8;
+  --beta:       #8A5A0B;
+  --beta-wash:  #F8EFDC;
+  --soon:       #6F6885;
+  --soon-wash:  #ECE8F6;
+
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --fs-d1:    clamp(2.5rem, 1.5rem + 4.2vw, 4.25rem);
+  --fs-d2:    clamp(1.875rem, 1.3rem + 2.4vw, 2.75rem);
+  --fs-h2:    clamp(1.375rem, 1.15rem + 0.9vw, 1.75rem);
+  --fs-h3:    1.125rem;
+  --fs-lead:  clamp(1.0625rem, 1rem + 0.35vw, 1.1875rem);
+  --fs-body:  1rem;
+  --fs-small: 0.9062rem;
+  --fs-xs2:   0.8125rem;
+  --fs-label: 0.6875rem;
+
+  --w-page:    72rem;
+  --w-prose:   66ch;
+  --w-measure: 54ch;
+
+  --r-card: 18px;
+  --r-icon: 22.37%;
+  --r-pill: 999px;
+
+  --shadow-lift:  0 1px 2px rgba(34,28,51,.05), 0 10px 28px -14px rgba(34,28,51,.22);
+  --shadow-frame: 0 2px 8px rgba(34,28,51,.08), 0 28px 60px -28px rgba(34,28,51,.38);
+
+  --sp-section: clamp(3.5rem, 2rem + 5vw, 6.5rem);
+  --sp-gutter:  clamp(1.25rem, 0.5rem + 2.5vw, 2.5rem);
+}
+
+/* The live site already answers this query, so dropping it would be a
+   regression for anyone who has already seen the page in dark. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:         #14111C;
+    --bg-2:       #1B1726;
+    --surface:    #1F1A2C;
+    --surface-2:  #241E33;
+
+    --fg:         #F1EEF8;
+    --fg-2:       #B9B2CC;
+    --fg-3:       #8F87A5;
+
+    --line:       #2E2740;
+    --line-2:     #3C3351;
+
+    --brand:      #A48CFF;   /* lifted for dark; 7.4:1 on --bg */
+    --brand-2:    #BCA9FF;
+    --brand-wash: #262038;
+    --brand-ink:  #17131F;
+
+    --play:       #4CC17E;
+    --apple:      #F1EEF8;
+    --on-play:    #0C1A12;
+    --on-apple:   #16141C;
+
+    --live:       #4CC17E;
+    --live-wash:  #16281E;
+    --beta:       #E0AC55;
+    --beta-wash:  #2A2113;
+    --soon:       #9A93AE;
+    --soon-wash:  #241F31;
+
+    --shadow-lift:  0 1px 2px rgba(0,0,0,.4), 0 10px 28px -14px rgba(0,0,0,.7);
+    --shadow-frame: 0 2px 8px rgba(0,0,0,.5), 0 28px 60px -28px rgba(0,0,0,.85);
+  }
+}
+
+html { -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-sans); background: var(--bg); color: var(--fg); }
+
+/* ── Things Tailwind cannot express ──────────────────────────────────────── */
+
+/* The hero wash. A violet bloom behind the character, two stops, so the top of
+   the page has depth without an image doing the work. */
+.bloom {
+  background:
+    radial-gradient(60% 55% at 18% 8%,  rgba(101,71,224,.16), transparent 62%),
+    radial-gradient(48% 48% at 88% 22%, rgba(129,104,234,.13), transparent 60%);
+}
+@media (prefers-color-scheme: dark) {
+  .bloom {
+    background:
+      radial-gradient(60% 55% at 18% 8%,  rgba(164,140,255,.16), transparent 62%),
+      radial-gradient(48% 48% at 88% 22%, rgba(164,140,255,.10), transparent 60%);
+  }
+}
+
+/* App icon plate. The squircle radius is a percentage so one class works at
+   every size from the 40px nav mark to the 128px page header. */
+.icon-plate { border-radius: var(--r-icon); overflow: hidden; display: block;
+              box-shadow: 0 1px 2px rgba(34,28,51,.12), 0 6px 16px -8px rgba(34,28,51,.3); }
+
+/* Phone bezel for screenshots. */
+.device { border-radius: 32px; background: linear-gradient(160deg,#37304a,#17131f); padding: 8px;
+          box-shadow: var(--shadow-frame); }
+.device-screen { border-radius: 25px; overflow: hidden; display: block; background: var(--surface); }
+
+/* Placeholder art. Every icon and screenshot slot in this set is a labelled
+   placeholder, so a slot that never got a real asset is obvious at review
+   instead of shipping as a grey box. */
+.shot-ph {
+  background:
+    repeating-linear-gradient(135deg, transparent 0 11px, rgba(101,71,224,.07) 11px 12px),
+    linear-gradient(160deg, var(--bg-2), var(--brand-wash));
+  display: flex; align-items: center; justify-content: center; text-align: center;
+}
+
+/* A store button that is real but unavailable. Disabled, with the reason
+   beside it — RULE 1. Not a hidden button, and not a live-looking one. */
+.btn-off { opacity: .45; cursor: not-allowed; }
+
+/* Horizontal screenshot rail with snap. Tailwind can do the scroll; the
+   snap-stop and the hidden scrollbar it cannot, and both matter on a phone. */
+.rail { scroll-snap-type: x mandatory; scrollbar-width: none; }
+.rail::-webkit-scrollbar { display: none; }
+.rail > * { scroll-snap-align: start; scroll-snap-stop: always; }
+
+/* ── Gallery chrome (index.html only, never a product screen) ─────────────── */
+.rationale { border: 1px dashed var(--line-2); background: var(--bg-2); border-radius: var(--r-card); padding: 18px 20px; font-size: .9062rem; color: var(--fg-2); line-height: 1.62; }
+.rationale-title { font-family: var(--font-mono); font-size: .6875rem; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-3); margin: 0 0 8px; }
+.rationale p + p { margin-top: .5rem; }
+
+/* 390-wide review frames. Fixed height for a state, growing for a page. */
+.phone { width: 390px; height: 844px; border-radius: 30px; overflow: hidden; position: relative;
+         background: var(--bg); box-shadow: var(--shadow-frame); flex: 0 0 auto; }
+.phone-tall { width: 390px; border-radius: 26px; overflow: hidden; background: var(--bg);
+              box-shadow: var(--shadow-frame); flex: 0 0 auto; }

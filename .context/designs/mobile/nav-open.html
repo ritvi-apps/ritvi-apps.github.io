@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu open — mobile — Ritvi Apps</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="../shared.css" />
+</head>
+<body class="bg-bg-2">
+
+<div class="border-b border-dashed border-line-2 bg-bg-2 px-5 py-2">
+  <div class="mx-auto flex max-w-page flex-wrap items-center gap-1.5 font-mono text-xs2">
+    <span class="mr-1 text-label uppercase tracking-label text-fg-3">Mobile · 390 ›</span>
+    <a href="home.html"     class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Home</a>
+    <a href="app.html"      class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">App page</a>
+    <a href="get.html"      class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Get redirect</a>
+    <a href="nav-open.html" class="rounded border border-brand/50 bg-brand-wash px-2 py-0.5 font-medium text-brand">Menu open</a>
+    <a href="../index.html" class="ml-auto rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">← All screens</a>
+  </div>
+</div>
+
+<div class="mx-auto max-w-page px-gutter py-8">
+  <p class="font-mono text-label uppercase tracking-label text-fg-3">menu · 390 × 844, fixed</p>
+  <p class="mt-2 max-w-prose text-small text-fg-2">
+    The menu is the app list, not a list of section headings. Each row carries the icon and the
+    live availability state — the two things a visitor came to find out — so the menu answers the
+    question instead of routing to a page that will.
+  </p>
+</div>
+
+<div class="flex justify-center px-gutter pb-16">
+<div class="phone flex flex-col bg-bg">
+
+  <header class="flex items-center gap-2.5 border-b border-line px-5 py-3">
+    <span class="icon-plate shot-ph h-8 w-8 text-[8px] text-fg-3">R</span>
+    <span class="font-bold tracking-tight">Ritvi Apps</span>
+    <button class="ml-auto inline-flex h-9 w-9 items-center justify-center rounded-pill border border-line-2 text-fg"><i data-lucide="x" class="h-4 w-4"></i></button>
+  </header>
+
+  <nav class="flex-1 overflow-y-auto px-5 py-6">
+    <p class="font-mono text-label uppercase tracking-label text-fg-3">Apps</p>
+    <div class="mt-3 grid gap-2.5">
+      <a href="app.html" class="flex items-center gap-3.5 rounded-card border border-line bg-surface p-3.5">
+        <span class="icon-plate shot-ph h-11 w-11 shrink-0 text-[8px] text-fg-3">Icon</span>
+        <span class="min-w-0 flex-1"><span class="block truncate font-semibold">Charades — Act it Out!</span>
+          <span class="block font-mono text-[10px] uppercase tracking-label text-live">Live</span></span>
+        <i data-lucide="chevron-right" class="h-4 w-4 shrink-0 text-fg-3"></i></a>
+      <a href="app.html" class="flex items-center gap-3.5 rounded-card border border-line bg-surface p-3.5">
+        <span class="icon-plate shot-ph h-11 w-11 shrink-0 text-[8px] text-fg-3">Icon</span>
+        <span class="min-w-0 flex-1"><span class="block truncate font-semibold">Tic Tac Toe — 2 Player XO</span>
+          <span class="block font-mono text-[10px] uppercase tracking-label text-live">Live</span></span>
+        <i data-lucide="chevron-right" class="h-4 w-4 shrink-0 text-fg-3"></i></a>
+      <a href="app.html" class="flex items-center gap-3.5 rounded-card border border-line bg-surface p-3.5">
+        <span class="icon-plate shot-ph h-11 w-11 shrink-0 text-[8px] text-fg-3">Icon</span>
+        <span class="min-w-0 flex-1"><span class="block truncate font-semibold">Imposter: Find the Liar</span>
+          <span class="block font-mono text-[10px] uppercase tracking-label text-beta">Android beta open</span></span>
+        <i data-lucide="chevron-right" class="h-4 w-4 shrink-0 text-fg-3"></i></a>
+      <a href="app.html" class="flex items-center gap-3.5 rounded-card border border-line bg-surface p-3.5">
+        <span class="icon-plate shot-ph h-11 w-11 shrink-0 text-[8px] text-fg-3">Icon</span>
+        <span class="min-w-0 flex-1"><span class="block truncate font-semibold">Aakalan</span>
+          <span class="block font-mono text-[10px] uppercase tracking-label text-beta">iOS beta open</span></span>
+        <i data-lucide="chevron-right" class="h-4 w-4 shrink-0 text-fg-3"></i></a>
+      <a href="app.html" class="flex items-center gap-3.5 rounded-card border border-dashed border-line-2 bg-surface-2 p-3.5">
+        <span class="icon-plate shot-ph h-11 w-11 shrink-0 text-[8px] text-fg-3">Icon</span>
+        <span class="min-w-0 flex-1"><span class="block truncate font-semibold">AskCal</span>
+          <span class="block font-mono text-[10px] uppercase tracking-label text-soon">Nothing to install yet</span></span>
+        <i data-lucide="chevron-right" class="h-4 w-4 shrink-0 text-fg-3"></i></a>
+    </div>
+
+    <p class="mt-8 font-mono text-label uppercase tracking-label text-fg-3">Studio</p>
+    <div class="mt-3 divide-y divide-line border-y border-line">
+      <a href="#" class="flex items-center gap-3 py-3.5"><i data-lucide="sparkles" class="h-4 w-4 text-brand"></i><span class="font-medium">How we build</span><i data-lucide="chevron-right" class="ml-auto h-4 w-4 text-fg-3"></i></a>
+      <a href="#" class="flex items-center gap-3 py-3.5"><i data-lucide="life-buoy" class="h-4 w-4 text-brand"></i><span class="font-medium">Support</span><i data-lucide="chevron-right" class="ml-auto h-4 w-4 text-fg-3"></i></a>
+      <a href="#" class="flex items-center gap-3 py-3.5"><i data-lucide="newspaper" class="h-4 w-4 text-brand"></i><span class="font-medium">Press kit</span><i data-lucide="chevron-right" class="ml-auto h-4 w-4 text-fg-3"></i></a>
+      <a href="#" class="flex items-center gap-3 py-3.5"><i data-lucide="scale" class="h-4 w-4 text-brand"></i><span class="font-medium">Privacy &amp; terms</span><i data-lucide="chevron-right" class="ml-auto h-4 w-4 text-fg-3"></i></a>
+    </div>
+  </nav>
+
+  <div class="border-t border-line px-5 py-5">
+    <p class="font-mono text-[11px] text-fg-3">© 2026 Ritvi Apps · Pune, India</p>
+  </div>
+
+</div>
+</div>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

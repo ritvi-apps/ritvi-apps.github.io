@@ -1,105 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ritvi Apps</title>
-<meta name="description" content="Small, honest apps for India. No ads in our games, no subscriptions you forget about.">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta property="og:title" content="Ritvi Apps">
-<meta property="og:description" content="Party games and useful apps, built in India. No ads, no subscription, works offline.">
-<meta property="og:image" content="https://ritvi-apps.github.io/social-preview.png">
-<meta property="og:url" content="https://ritvi-apps.github.io/">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://ritvi-apps.github.io/social-preview.png">
+<title>Ritvi Apps — moved</title>
+<link rel="canonical" href="https://ritesh-firodiya.github.io/products/">
+<meta http-equiv="refresh" content="0; url=https://ritesh-firodiya.github.io/products/">
+<meta name="robots" content="noindex, follow">
 <style>
-  :root {
-    --bg:#F3EFFD; --fg:#2E2745; --mut:#6b6479; --line:#e2dbf5; --card:#fff; --accent:#7361E8;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg:#16121f; --fg:#ededf0; --mut:#9a94a6; --line:#2a2438; --card:#1e1929; --accent:#A78BFA; }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin:0; background:var(--bg); color:var(--fg);
-    font:16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-    padding-block:64px; padding-left:20px; padding-right:20px;
-  }
-  main { max-width:760px; margin:0 auto; }
-  h1 { font-size:30px; letter-spacing:-.02em; margin:0 0 10px; }
-  .tag { color:var(--mut); margin:0 0 44px; font-size:17px; }
-  h2 { font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); margin:44px 0 16px; font-weight:600; }
-  .grid { display:grid; gap:14px; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); }
-  .app {
-    background:var(--card); border:1px solid var(--line); border-radius:12px;
-    padding:18px; text-decoration:none; color:inherit; display:block;
-  }
-  .app:hover { border-color:var(--accent); }
-  .app h3 { margin:0 0 6px; font-size:16px; }
-  .app p { margin:0; color:var(--mut); font-size:14px; }
-  .soon { opacity:.55; }
-  .badge { display:inline-block; font-size:11px; letter-spacing:.08em; text-transform:uppercase;
-           color:var(--accent); border:1px solid var(--line); border-radius:99px; padding:2px 9px; margin-top:10px; }
-  footer { margin-top:56px; padding-top:22px; border-top:1px solid var(--line); color:var(--mut); font-size:14px; }
-  footer a { color:inherit; }
-  ul.vals { list-style:none; padding:0; margin:0; display:grid; gap:10px; }
-  ul.vals li { padding-left:22px; position:relative; color:var(--mut); }
-  ul.vals li::before { content:"—"; position:absolute; left:0; color:var(--accent); }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+         color: #14130f; background: #fbf9f4; line-height: 1.7;
+         max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem; }
+  h1 { font-size: 1.5rem; margin: 0 0 .75rem; }
+  p { margin: 0 0 1rem; color: #45423a; }
+  a { color: #8a3324; }
+  .u { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85rem; color: #78736a; word-break: break-all; }
 </style>
 </head>
 <body>
-<main>
-  <img src="icon-512.png" alt="" width="84" height="84" style="display:block;margin:0 0 14px;border-radius:20px">
-  <h1>Ritvi Apps</h1>
-  <p class="tag">Small, honest apps built in India.</p>
-
-  <h2>How we build</h2>
-  <ul class="vals">
-    <li>No ads in our games.</li>
-    <li>One-time purchases where we can, not subscriptions you forget about.</li>
-    <li>Works offline wherever the app has no reason to need a network.</li>
-    <li>We ask for the permissions we use, and nothing else.</li>
-  </ul>
-
-  <h2>Apps</h2>
-  <div class="grid">
-    <a class="app" href="https://play.google.com/store/apps/details?id=com.riteshf.charadesbollywood">
-      <h3>Charades — Act it Out!</h3>
-      <p>Dumb charades for the room you're already in. 5,149 cards across Bollywood, Tollywood, Hollywood and Family &amp; Kids.</p>
-      <span class="badge">On Google Play</span>
-    </a>
-    <div class="app soon">
-      <h3>AskCal</h3>
-      <p>Photograph a meal, get a calorie estimate that admits what it can't see.</p>
-      <span class="badge">Coming soon</span>
-    </div>
-    <div class="app soon">
-      <h3>Imposter</h3>
-      <p>Everyone gets the word. Except one of you. A party game for 3–20 people on one phone.</p>
-      <span class="badge">Coming soon</span>
-    </div>
-    <div class="app soon">
-      <h3>Aakalan</h3>
-      <p>Your expenses and everyone else's, on one ledger. Settled over UPI.</p>
-      <span class="badge">Coming soon</span>
-    </div>
-  </div>
-
-  <h2>Support</h2>
-  <p style="color:var(--mut); margin:0">
-    Questions, bugs or account deletion: <a href="mailto:firodiya.ritesh@gmail.com">firodiya.ritesh@gmail.com</a><br>
-    Privacy policies for every app: <a href="https://ritvi-apps.github.io/legal/">ritvi-apps.github.io/legal</a>
-  </p>
-
-  <footer>
-    © <span id="y"></span> Ritvi Apps ·
-    <a href="https://ritvi-apps.github.io/legal/terms.html">Terms</a> ·
-    <a href="https://ritvi-apps.github.io/legal/">Privacy</a>
-    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-  </footer>
-</main>
+  <h1>Ritvi Apps has moved</h1>
+  <p>This document now lives on <strong>ritesh-firodiya.github.io</strong>. You should be redirected automatically.</p>
+  <p><a href="https://ritesh-firodiya.github.io/products/">Open Ritvi Apps &rarr;</a></p>
+  <p class="u">https://ritesh-firodiya.github.io/products/</p>
+  <p>This address is kept working permanently, because app builds already installed on people&rsquo;s phones ask for it.</p>
+<script>location.replace('https://ritesh-firodiya.github.io' + '/products/');</script>
 </body>
 </html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Not found — Ritvi Apps</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../tailwind.config.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="../shared.css" />
+</head>
+<body class="bg-bg text-fg">
+
+<div class="border-b border-dashed border-line-2 bg-bg-2 px-5 py-2">
+  <div class="mx-auto flex max-w-page flex-wrap items-center gap-1.5 font-mono text-xs2">
+    <span class="mr-1 text-label uppercase tracking-label text-fg-3">Web ·&nbsp;/404 ›</span>
+    <a href="home.html"     class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Home</a>
+    <a href="support.html"  class="rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">Support</a>
+    <a href="404.html"      class="rounded border border-brand/50 bg-brand-wash px-2 py-0.5 font-medium text-brand">404</a>
+    <a href="../index.html" class="ml-auto rounded border border-line-2 bg-surface px-2 py-0.5 text-fg-2 hover:border-brand/40">← All screens</a>
+  </div>
+</div>
+
+<header class="border-b border-line">
+  <div class="mx-auto flex max-w-page items-center gap-5 px-gutter py-3.5">
+    <a href="home.html" class="flex items-center gap-2.5">
+      <span class="icon-plate shot-ph h-9 w-9 text-[9px] text-fg-3">R</span>
+      <span class="text-h3 font-bold tracking-tight">Ritvi Apps</span></a>
+  </div>
+</header>
+
+<!-- A 404 on this domain is almost always an old store link or a renamed app
+     page — so it routes to the apps rather than apologising. -->
+<main class="bloom mx-auto flex min-h-[68vh] max-w-page flex-col justify-center px-gutter py-section">
+  <p class="font-mono text-label uppercase tracking-label text-fg-3">404</p>
+  <h1 class="mt-5 max-w-[16ch] text-d1 font-extrabold">That link is old, or the app moved.</h1>
+  <p class="mt-6 max-w-measure text-lead text-fg-2">Every app has its own page now. Here they all are.</p>
+
+  <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <a href="app.html" class="group flex items-center gap-3.5 rounded-card border border-line bg-surface p-4 transition hover:border-brand/40">
+      <span class="icon-plate shot-ph h-12 w-12 shrink-0 text-[8px] text-fg-3">Icon</span>
+      <span class="min-w-0"><span class="block truncate font-semibold group-hover:text-brand">Charades</span>
+        <span class="block font-mono text-label uppercase tracking-label text-live">Live</span></span></a>
+    <a href="app.html" class="group flex items-center gap-3.5 rounded-card border border-line bg-surface p-4 transition hover:border-brand/40">
+      <span class="icon-plate shot-ph h-12 w-12 shrink-0 text-[8px] text-fg-3">Icon</span>
+      <span class="min-w-0"><span class="block truncate font-semibold group-hover:text-brand">Tic Tac Toe</span>
+        <span class="block font-mono text-label uppercase tracking-label text-live">Live</span></span></a>
+    <a href="app-beta.html" class="group flex items-center gap-3.5 rounded-card border border-line bg-surface p-4 transition hover:border-brand/40">
+      <span class="icon-plate shot-ph h-12 w-12 shrink-0 text-[8px] text-fg-3">Icon</span>
+      <span class="min-w-0"><span class="block truncate font-semibold group-hover:text-brand">Imposter</span>
+        <span class="block font-mono text-label uppercase tracking-label text-beta">Beta open</span></span></a>
+    <a href="app-beta.html" class="group flex items-center gap-3.5 rounded-card border border-line bg-surface p-4 transition hover:border-brand/40">
+      <span class="icon-plate shot-ph h-12 w-12 shrink-0 text-[8px] text-fg-3">Icon</span>
+      <span class="min-w-0"><span class="block truncate font-semibold group-hover:text-brand">Aakalan</span>
+        <span class="block font-mono text-label uppercase tracking-label text-beta">Beta open</span></span></a>
+  </div>
+
+  <div class="mt-9 flex flex-wrap gap-3">
+    <a href="home.html" class="inline-flex items-center gap-2 rounded-pill bg-brand px-5 py-3 text-small font-semibold text-brand-ink transition hover:bg-brand-2">
+      <i data-lucide="arrow-left" class="h-4 w-4"></i> Back to the start</a>
+    <a href="support.html" class="inline-flex items-center gap-2 rounded-pill border border-line-2 bg-surface px-5 py-3 text-small font-semibold transition hover:border-brand">
+      <i data-lucide="life-buoy" class="h-4 w-4"></i> Support</a>
+  </div>
+</main>
+
+<footer class="border-t border-line">
+  <div class="mx-auto flex max-w-page flex-wrap items-center gap-x-6 gap-y-3 px-gutter py-8 font-mono text-xs2 text-fg-3">
+    <span>© 2026 Ritvi Apps</span>
+    <a href="#" class="hover:text-fg">Privacy</a>
+    <a href="support.html" class="hover:text-fg">Support</a>
+    <span class="ml-auto">Made in Pune, India</span>
+  </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>
