@@ -1,27 +1,11 @@
-# ritvi-apps.github.io — redirect to ritesh-firodiya.github.io
+# ritvi-apps.github.io — retired
 
-The Ritvi Apps site has been folded into
-**<https://ritesh-firodiya.github.io/products/>**, which carries every app with
-its real monetization model and price.
+This site has moved to https://ritesh-firodiya.github.io/. What is left:
 
-`index.html` is a redirect page: 200, `rel=canonical`, meta refresh, and a
-visible link for anything that does not run scripts.
+- `app-ads.txt` — AdMob reads it from the App Store seller URL's host. Tic Tac
+  Toe iOS 1.0.11 still names this host; 1.0.12 names the new one.
+- `index.html` redirects to the portfolio; `404.html` sends any old path,
+  such as an old privacy-policy link, to its `/legal/` page.
 
-## Before deleting this
-
-Nothing in the app repos points at this bare root — the store configs all
-reference `ritvi-apps.github.io/legal/`, which is a **separate repository**
-(`ritvi-apps/legal`) and must be kept alive permanently.
-
-However, the **developer website field on the Play developer account** may point
-here, and AdMob only honours `app-ads.txt` on the domain named in that field.
-Tic Tac Toe carries ads. Before removing this repo, confirm that field has been
-moved and that `ritesh-firodiya.github.io/app-ads.txt` is being read.
-
-`.context/designs/` is the design set for the version of this site that was
-never shipped. Kept for the record; superseded by the design set in the
-ritesh-firodiya.github.io repo.
-
-## Deploy
-
-GitHub Pages, branch `main`, root. No build step.
+Delete this repo once Tic Tac Toe iOS 1.0.12 is released and AdMob's
+app-ads.txt page shows the new host (`products/tic-tac-toe` T006, T014).
